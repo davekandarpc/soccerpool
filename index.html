@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Voorspel het WK met Voorspel Oranje</title>
+
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+    <!-- javascript -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script> 
+ 	<script src="js/jquery.fittext.js"></script>
+	<script src="js/fittext.js"></script>
+    <script src="./js/default.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FlexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        // The slider being synced must be initialized first
+        $('#carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: true,
+            slideshow: false,
+            itemWidth: 340,
+            itemMargin: 20
+            //asNavFor: '#slider'
+        });
+
+        $('#slider').flexslider({
+            animation: "slide",
+            controlNav: true,
+            animationLoop: true,
+            slideshow: false,
+			 start: function(){
+							$(".banner_content").fitText(1.5, { minFontSize: '15px', maxFontSize: '20px' });
+					},
+				 after: function(){
+							$(".banner_content").fitText(1.5, { minFontSize: '15px', maxFontSize: '20px' });
+					}
+            //sync: "#carousel"
+        });
+    });
+    </script>
+</head>
+<body>
+
+<!-- Start of first page: #opening -->
+<div data-role="page" id="opening-sequence" >
+	<div data-role="header" class="header">
+		<div class="logo-opening-open"><img src="images/logo.png"></div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" >	
+		<div class="banner">
+			<section class="slider">
+					<div id="slider" class="flexslider">
+					  	<ul class="slides">
+						    	<li>
+								<img src="images/slider_1.jpg">
+								<div class="banner_content">
+								Start een eigen voetbalpool<br> en nodig je vrienden uit!
+								</div>
+							</li>
+							<li>
+								<img src="images/slider_2.jpg">
+								<div class="banner_content">
+								Of speel mee met de pools van anderen
+								</div>
+							</li>
+							<li>
+								<img src="images/slider_3.jpg">
+								<div class="banner_content">
+								Vul jouw WK-voorspelling in<br> en win een reis naar Brazilië
+								</div>
+							</li>
+							<li>
+								<img src="images/slider_4.jpg">
+								<div class="banner_content">
+									
+									<a href="#dashboard" class="facebook_link">Login met Facebook</a>
+									<a href="#manual-login" class="btn btn_darkgray">Handmatig inloggen</a>
+									<div class="facebook_message">Wij adviseren Facebook</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</section>
+		</div>
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="a" class="footer-initial">
+		<div class="bot-orange-logo-original home-logo"><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_home clearfix"></div>
+	</div><!-- /footer -->
+</div><!-- /page openingsequence -->
+
+<!-- Start of first page: #manual login -->
+<div data-role="page" id="manual-login" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#manual-login">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="manual_login_logo">
+				<img src="images/login_orange_logo.png">
+			</div>
+			<div class="ui-field-contain">
+			    <input type="text" name="textinput-1" id="username" placeholder="Email" value="">
+			</div>
+			<div class="ui-field-contain">
+			    <input type="text" name="textinput-1" id="password" placeholder="Wachtwoord" value="">
+			</div>
+			<a class="btn btn_orange login_more_top" id="login" href="#">
+                Inloggen
+            </a>
+			<a href="lost_password.html" class="btn btn_blue">Wachtwoord vergeten?</a>
+		</div>
+	</div><!-- /content -->
+	
+    <div data-role="footer" class="mobile-footer" data-theme="a">
+		<div class="home-logo footer-logo "><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_home clearfix"></div>
+		<div class="no-account-message">Nog geen account? <a href="#create_account_1">Registreer nu!</a></div>
+	</div>
+    
+	<!-- /footer -->
+</div><!-- /page manual login -->
+
+<!-- Start of third page: #create account -->
+<div data-role="page" id="create_account_1" >
+
+	<div data-role="header" class="header">
+
+		<div class="back-but-blk">
+
+			<a href="#manual_login">terug</a>
+
+		</div>
+
+		<div class="logo"><img src="images/logo.png"></div>
+
+		<div class="next-but-blk">
+
+			&nbsp;
+
+		</div>
+
+		<div class="topshadow"></div>
+
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+
+		<div class="body_container_register">
+			<form method="post" action="" id="registerForm">
+			<div class="manual_login_logo">
+
+				<img src="images/login_orange_logo.png">
+
+			</div>
+
+			<div  class="clearfix">
+
+				<div class="create_account_left">
+
+					<div class="ui-field-contain">
+
+					    <input type="text" name="first_name" id="vooornaam" placeholder="Voornaam" required value="" >
+
+					</div>
+
+					<div class="ui-field-contain">
+
+					    <input type="text" name="last_name" id="achternaam" placeholder="Achternaam" required value="" >
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<h1>Maak je account aan</h1>
+
+			<div class="ui-field-contain">
+
+			    <input type="text" name="user_login" id="textinput-1" placeholder="Je gebruikersnaam" required value="">
+
+			</div>
+
+			<div class="ui-field-contain">
+
+			    <input type="text" name="user_pass" id="textinput-1" placeholder="Wachtwoord" required value="">
+
+			</div>
+
+			<div class="ui-field-contain">
+
+			    <input type="text" name="user_email" id="textinput-1" placeholder="e-mailadres" required value="">
+
+			</div>
+
+			<h1>Ik ben</h1>
+
+			<div class="ui-field-contain">
+				
+				<div class="gender_blk">
+					<input type="radio" name="gender" value="" class="" id="1">
+					<div class="gender_label"> een man</div>
+				</div>
+
+				<div class="gender_blk">
+					<input type="radio"  name="gender" value="" class=" omega-input"  id="2">
+					<div class="gender_label">een vrouw</div>
+				</div>
+			</div>
+
+			<h1>Geboortedatum</h1>
+
+			<div class="ui-field-contain">
+			    <input type="text" name="day" id="day" placeholder="dag" value="" required class="small_input alpha-input">
+			
+				<input type="text" name="month" id="textinput-2" placeholder="maand" value="" required class="small_input alpha-input">
+
+				<input type="text" name="year" id="textinput-3" placeholder="jaar" value="" required class="medium_input omega-input">
+            </div>
+
+			<div class="ui-field-contain">
+			
+			    <input type="text" name="residence" id="textinput-4" placeholder="woonplaats" required  value="">
+
+			</div>			
+
+			<div id="edit-field-school-education-und" class="form-checkboxes">
+
+			    <div class="form-item form-type-checkbox form-item-field-school-education-und-28">
+				<input type="checkbox" id="edit-field-school-education-und-28" name="field_school_education[und][28]" value="28" required checked="checked" class="form-checkbox">
+				<label class="option" for="edit-field-school-education-und-28">Door gebruik te maken van Voorspel Oranje ga ik akkoord met de gebruikersvoorwaarden.</label>
+
+			    </div>
+			</div>
+
+			<button type="submit" class="btn btn_orange login_more_top"> Aanmelden </button>
+			</form>
+		</div>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page three create account -->
+
+<!-- Start of fourth page: #create-soccerpool-1 -->
+<div data-role="page" id="create-soccerpool-1" >
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Start je eigen pool </h1>
+					<h2>en nodig je vrienden uit</h2>
+				</div>
+			</div>
+			<form method="post" action"" name="poolCreate">
+				<div  class="clearfix">
+					<div class="create_account_left omega-input">
+						<div class="ui-field-contain">
+						    <input type="text" name="name" id="textinput-1" required="required" placeholder="Je poolnaam" value="" >
+						</div>
+						<div class="ui-field-contain">
+						    <input type="text" name="to_win" id="textinput-1" required="required" placeholder="Zet een prijs in" value="" >
+						</div>
+					</div>
+					<button type="button" class="btn btn_darkgray add_photo_but alpha-input margin_none"></button>
+				</div>
+				<div class="ui-field-contain">
+				    <textarea type="text" name="description" id="textinput-1" required="required" placeholder="Hier kun je wat tekst plaatsen maximaal 165 tekens. Waarom moet iedereen zich aansluiten in jouw pool? Omschrijf het hier." value=""></textarea>
+				</div>
+				<button type="submit" name="submit" class="btn btn_orange">Pool aanmaken</button>
+			</form>
+		</div>
+	</div><!-- /content -->
+     <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+           <li class="active"><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo-original create-pool-logo"><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_pool clearfix"></div>
+	</div><!-- /footer -->
+</div><!-- /page four create soccerpool -->
+
+<!-- Start of fifthe page: #dashboard -->
+<div data-role="page" id="dashboard" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#">&nbsp;</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		
+		<div class="home-page-pic"  style="background-image:url('images/splash-home.jpg') !important; ">
+
+			
+
+			<div class="make_prediction">
+
+				<div class="manual_login_logo">
+					<img src="images/login_orange_logo.png">
+				
+				</div>
+			
+				<div class="make_prediction_text home-title-margins">
+				<h1>Welkom bij Voorspel Oranje de GRATIS voetbal pool tijdens het WK 2014</h1>
+				</div>
+				<a href="#join_soccerpool_1" class="home_link_1">Doe mee aan een pool</a>
+				<a href="#create-soccerpool-1" class="home_link_2">Maak je eigen pool aan</a>
+				<a href="#your-pool-1" class="home_link_3">Mijn voetbal pools</a>
+				
+			</div>
+		</div>
+
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page five dashboard -->
+
+<!-- Start of page six: #pouleoverzicht -->
+<div data-role="page" id="groepen" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>De Poules</h1>
+					<h2>op en rij</h2>
+				</div>
+			</div>
+			
+			<div class="plain_text_content">
+				<p><strong>Overzicht van de verschillende Poules</strong></p>
+				<div id="rankings">
+				
+				</div>
+			</div>
+			
+
+		</div>
+		
+	</div><!-- /content -->
+
+	 <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li class="active"><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page six -->
+
+<!-- Start of seven: #invite friends -->
+<div data-role="page" id="invite-friends" >
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="prediction_step_new">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="next-but-blk">
+			<a href="#social-share">volgende</a>
+		</div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="home-page-pic">
+			<div class="make_prediction">
+				<div class="make_prediction_text">
+				<h1>Nodig je vrieden uit.</h1>
+					<p>Nu je pool is aangemaakt en je voorspelling is opgeslagen is het wel zo leuk met vrienden, kennissen, collega’s en familieleden te spelen. Nodig ze uit!</p>
+				</div>
+				<div class="message">
+					<p>Ik doe mee aan de gratis voetbal-app Voorspel oranje en maak kans op een reis naar Brazilië voor 2 personen. Doe je mee aan de spannendste WK-wedstrijd van 2014?</p>
+					<p>Selecteer hoe je je vrienden wilt uitnodigen</p>
+				</div>
+				<a href="#" class="facebook_link">Via facebook</a>
+				<a href="invite_using_whats_app.html" class="pool-phone">Via What’s app</a>
+				<a href="#" class="pool-telegram">Via Telegram</a>
+				<a href="#dashboard" class="btn btn_orange">Afronden</a>
+			</div>
+			
+		</div>
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-footer home-logo "><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_home clearfix"></div>
+	</div><!-- /footer -->
+</div><!-- /page seven invite friends -->
+
+<!-- Start of page eight: #invite friends what's app -->
+<div data-role="page" id="invite-whatsapp" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#invite-friends">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		
+		<div class="home-page-pic" style="background-image:url('images/splash-home.jpg') !important; ">
+
+			
+
+			<div class="make_prediction">
+
+				<div class="manual_login_logo">
+					<img src="images/login_orange_logo.png">
+				
+				</div>
+			
+				<div class="whatsapp_green_box">
+	<img src="images/whats_app.png">
+<h1>Uitnodigen via What’s app</h1>
+<p>Om je vrienden uit te nodigen via what’s app maak je eerst in what’s app een vrienden groep aan. Na het aanmaken van de  groep kom je hier terug en klik je op uitnodigen via what’s app. Selecteer je groep en de hele groep wordt automatisch uitgenodigd om deel te nemen aan je pool heb je al een groep aangemaakt klik dan op de nodig uit via what’s app button</p>
+				</div>
+				
+
+				<div class="whatsapp_green_box"><a href="invite_using_whats_app.html" class="pool-phone">Uitnodigen via What’s app</a>
+				
+				</div>
+			</div>
+			<a href="invite_using_whats_app.html" class="pool-phone">Uitnodigen via What’s app</a>
+		<!--	<img src="images/small-splash.jpg" class="splashhome">-->
+		</div>
+
+		
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+           <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+        
+        
+    </div><!-- /panel -->
+
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page eight #invite friends what's app -->
+
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="join_soccerpool_1" >
+    <div data-role="header" class="header">
+        <div class="back-but-blk">
+            <a href="#">terug</a>
+        </div>
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+        <div class="topshadow"></div>
+    </div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Deelnemen</h1>
+					<h2>Aan een pool</h2>
+				</div>
+			</div>
+           <div class="plain_text_content"> <div class="jointitle clearfix">Doe mee aan de</div>
+			<a href="#prediction_step_new" onclick="poolId=3" class="btn btn_orange">Voorspel Oranje Pool</a>
+			<div class="participants clearfix">aantal deelnemers: 	</div>
+			<div class="search_titles clearfix">
+				<strong>Zoeken</strong>Of gebruik de volgende mogelijkheden
+			</div>
+			<div class="ui-field-contain">
+			    <input type="text" name="textinput-1" id="nameField" placeholder="Naam voetbalpool" value="">
+			</div>
+			<div class="ui-field-contain">
+			    <label for="textinput-2">Zoek op de eerste letter</label>
+			    <input type="text" name="textinput-1" id="firstLetterField" placeholder="alles" value="" class="small_input omega-input">
+			</div>
+			<a href="#" class="btn btn_blue" id="search">Zoek pools</a>
+		</div>
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of page 9: #join soccerpool -->
+<div data-role="page" id="searchResults" >
+    <div data-role="header" class="header">
+        <div class="back-but-blk">
+            <a href="#join_soccerpool_1">terug</a>
+        </div>
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+        <div class="topshadow"></div>
+    </div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Deelnemen</h1>
+					<h2>aan een pool</h2>
+				</div>
+			</div>
+			<h1>Zoekresultaten</h1>
+			<div class="results">
+			</div>
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page nine #join soccerpool -->
+
+<!-- Start of page ten: #single pool page -->
+<div data-role="page" id="poolPage" >
+    <div data-role="header" class="header">
+        <div class="back-but-blk">
+            <a href="#join_soccerpool_1">terug</a>
+        </div>
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+        <div class="topshadow"></div>
+    </div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="single-pool clearfix">
+				<div class="single-pool-pic"><img src="images/single-pool-pic.jpg"></div>
+				<div class="single-pool_right">
+					<div class="single-pool_name" id="poolName"></div>
+					<h2>Prijs:</h2>
+					<div class="single-pool_desc" id="poolPrice"></div>
+				</div>
+			</div>
+            <div class="ui-field-contain_result">
+
+                <input type="text" name="textinput-1" id="contestersCount" placeholder="" value="" class="single-pool-txt">
+                <button rel="" id="poolId" style="display: none" class="btn btn_orange_light view_but doemee_but join_pool">doe mee</button>
+                <button rel="" style="display: none" class="btn btn_orange_light view_but doemee_but alreadyinpool">je doet mee</button>
+            </div>
+            
+            <div style="padding-top: 20px; clear: both; display: none;" id="predictionButton">
+           	 	<a href="" id="makePrediction" class="btn btn_orange">Pas je voorspelling aan</a>
+            </div>
+			<div class="involved_blk">
+				<ul id="contesters">
+				</ul>
+			</div>
+			
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+        
+        
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo-original pool-logo"><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_pool clearfix"></div>
+	</div><!-- /footer -->
+</div><!-- /page ten single pool page-->
+
+<!-- Start of page eleven: #lost_password -->
+<div data-role="page" id="lost-password" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#opening-sequence">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="manual_login_logo">
+				<img src="images/login_orange_logo.png">
+			</div>
+			<div class="ui-field-contain">
+			    <input type="text" name="textinput-1" id="username" placeholder="Email" value="">
+			</div>
+			<a class="btn btn_orange login_more_top" id="login" href="#">
+                Stuur nieuw wachtwoord
+            </a>
+		</div>
+	</div><!-- /content -->
+	
+    <div data-role="footer" class="mobile-footer" data-theme="a">
+		<div class="home-logo footer-logo "><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_home clearfix"></div>
+		<div class="no-account-message">Wachtwoord gevonden? <a href="#manual_login">Log nu in!</a></div>
+		<div class="no-account-message">Nog geen account? <a href="#create-account_1">Registreer nu!</a></div>
+	</div>
+    
+	<!-- /footer -->
+</div><!-- /page eleven #lost_password -->
+
+<!-- Start of page twelve: #over_ons -->
+<div data-role="page" id="over-ons" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Over</h1>
+					<h2>De huizenbemiddelaar</h2>
+				</div>
+			</div>
+			<div class="plain_text_content">
+				<p><strong>De huizenbemiddelaar</strong></p>
+				<p>Is een landelijke makelaars organisatie met ruim 50 vestigingen door heel Nederland. We zijn in 2006 gestart en door onze transparante en innovatieve benadering niet meer weg te denken uit de makelaardij.</p>
+                <p><strong>Je huis verkopen</strong></p>
+                <p>Door onze innovatieve aanpak staat De Huizenbemiddelaar bekend als vertrouwd en voordelig. Wij verzorgen de complete begeleiding en je mag zelf bezichtigen verzorgen, en dat slechts voor  € 695,- inclusief  BTW.</p>
+                <p><strong>Een huis kopen</strong></p>
+                <p>De professionele aankoopbegeleiding van De Huizenbemiddelaar is een zeer voordeling keuze omdat we je helpen met de aankoop van je toekomstige woning voor slechts € 695,- inclusief BTW. De Huizenbemiddelaar heeft verstand van de lokale woningmarkt en met onze professionele status staat u sterker in het aankoopproces.</p>
+                <p><strong>Hypotheekadvies</strong></p>
+                <p>Als onafhankelijk hypotheekadviseur begeleidt De Huizenbemiddelaar je van droom tot droomhuis. We vergelijken diverse geldverstrekkers en helpen je bij het kiezen van de meest gunstige hypotheek.</p>
+                <p><strong>Meer weten?</strong></p> 
+                <p>Maak een vrijblijvende afspraak bij De Huizenbemiddelaar bij jou in de buurt op <a href="http://www.dehuizenbemiddelaar.nl">www.dehuizenbemiddelaar.nl</a></p>
+			</div>
+		</div>	
+	</div><!-- /content -->
+
+	 <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li class="active"><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page twelve #over-ons -->
+
+<!-- Start of page thriteen: #prediction-step-1 -->
+<div data-role="page" id="prediction_step_new" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		
+		<div class="home-page-pic">
+			<div class="make_prediction">
+				<div class="make_prediction_text">
+				<h1>Doe je voorspelling en win</h1>
+				scroll naar beneden en vul in	
+				</div>
+				
+				<div class="predictions-section">
+				
+					<form method="post" action="" id="predicitions">
+						<input type="hidden" name="poolId" value="" />
+						<div id="resultsList">
+			
+						</div>
+	                        
+	                    <div class="predictions-submit">
+	                        <button type="submit" class="btn btn_orange login_more_top">Maak je voorspelling</button>       
+	                    </div>
+	                    
+	                </form>
+				</div>
+			</div>
+			
+		</div>
+	</div><!-- /content -->
+       <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+           <li><a href="#dashboard">dashboard</a></li>
+            <li><a href="#wedstrijd-schema">wedstrijd schema</a></li>
+            <li><a href="#stadions">stadions</a></li>
+            <li><a href="#groepen">groepen</a></li>
+            <li><a href="#prijzen">prijzen</a></li>
+            <li><a href="#spelregels">spelregels</a></li>
+            <li><a href="#over-ons">de huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+
+                <!-- /footer -->
+                <div data-role="footer" class="fixed-footer-sec" data-theme="a">
+                    <div class="fixed-footer-prediction"><img src="images/footer-total.png" alt="" /></div>
+                </div>
+                <!-- /footer -->
+			</div>
+		</div>
+	
+	</div><!-- /content -->
+</div><!-- /page thirteen #prediction-step-1 -->
+
+<!-- Start of first page: #prijzen -->
+<div data-role="page" id="prijzen" >
+
+	<div data-role="header" class="prijzen">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>De Prijzen</h1>
+					<h2>Waar speel je voor?</h2>
+				</div>
+			</div>
+
+			<div class="plain_text_content">
+				<strong>Hoofdprijs</strong>
+                <p><img src="images/rio.jpg"></p>
+				<p>8-daagse reis voor 2 personen naar Rio de Janeiro bestaande uit vlucht + accommodatie. Mede mogelijk gemaakt door <a href="http://www.braziliereisspecialist.nl/">de Brazilië Reis Specialist.</a></p>
+                <p>Rio de Janeiro staat bekend als ‘a cidade Maravilhosa’ ofwel de schitterende stad. Een met adembenemende landschappen gezegende stad te midden van weelderige groene bergen en een kristalheldere zee. Met wereldberoemde toeristische trekpleisters als de ‘Pão de Açúcar’, ofwel suikerbroodberg , de Corcovado met het iconische Christusbeeld en uiteraard de wereldberoemde stranden van Copacabana en Ipanema, is het een bestemming waar je geweest moet zijn. Rio ademt energie en ritme en de lokale bevolking, ook bekend als de ‘cariocas’ staan bekend vanwege hun charmante en kalme persoonlijkheden.</p>
+                <p>Ga met de locals mee feesten in de uitgaanswijk ‘lapa’, met vele dansgelegenheden en gezellige bars. Op zondag is de boulevard in Rio vrijwel autovrij. Geweldig dus om op dit soort dagen over de kilometerslange boulevard te fietsen, skaten of te wandelen. Eén van de mooiste maar minder bekende uitzichten van Rio is de 'Vista Chinesa', gelegen in het grootste regenwoud ter wereld in een stedelijke omgeving, namelijk 'Floresta da Tijuca'. In deze ‘urban jungle’ zijn veel activiteiten mogelijk zoals wandelen en fietsen.</p>
+                <p>Deze reis kan in de volgende maanden geboekt worden oktober, november, maart,april, mei (niet tijdens Carnaval).</p>  
+                <strong>Tweede prijs</strong>
+                <p><img src="images/tv.jpg"></p>
+                <p>Samsung  32 Inch Smart LED-tv</p>
+                <p>Deze Samsung is een 32 inch Full HD-tv met Smart TV-functies. Je hebt dus beschikking over een volledige webbrowser en vele leuke apps, als YouTube en Uitzending Gemist. Ook stream je met de Samsung  gemakkelijk bestanden vanaf andere apparaten binnen je thuisnetwerk via AllShare. Om dit draadloos te doen heb je wel de optionele wifi-dongle nodig. Kleuren van foto- en videomateriaal worden natuurgetrouw weergegeven door Samsungs Wide Color Enhancer-technologie. Daarnaast kijk je, bij gebruik van een CI-module, digitale tv zonder externe digitale decoder, want de complete Samsung  beschikt over een ingebouwde kabel en digitenne tuner.</p>
+                <strong>Derde prijs</strong>
+                <p><img src="images/barbecook.jpg"></p>
+                <p>Barbecook Impuls 3.0 Black</p>
+                <p>Deze Impuls 3.0 gasbarbecue van Barbecook is voorzien van alle basiselementen die je van een buitenkeuken mag verwachten. De 2 hoofdbranders van in totaal 7,6 kW verwarmen een kookoppervlak van 50 x 35 cm, geschikt voor ongeveer 8 personen. Daarnaast heeft de barbecue twee zijtafels, waarvan er één een zijbrander bevat. Hierop kun je gemakkelijk je sauzen of bijgerechten klaarmaken zonder weg te hoeven van de barbecue. De BBQ heeft twee wielen aan de onderkant om hem te verplaatsen. De Barbecook Impuls 3.0 gasbarbecue is gemaakt van zwart geëmailleerd roestvrijstaal en heeft een ingebouwde thermometer.</p>
+			</div>
+		</div>		
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+       <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li class="active"><a href="prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page fourteen prijzen -->
+
+<!-- Start of page fifteen: #spelregels -->
+<div data-role="page" id="spelregels" >
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>De spelregels</h1>
+					<h2>Zo word jij de voetbal koning</h2>
+				</div>
+			</div>
+			
+			<div class="plain_text_content">
+                <strong>Registreren</strong>
+                <p>bij Voorspel Oranje is eenvoudig. Meldt je aan via je Facebook account of  handmatig door een gebruikersnaam en een wachtwoord aan te maken en in te loggen . Ben je je wachtwoord vergeten, klik dan op wachtwoord vergeten en we sturen je een nieuw wachtwoord toe.</p>
+
+                <strong>Het voorspellen van de wedstrijden</strong>
+                <p>Voorspel de eindscore van alle wedstrijden Tijdens het WK 2014 . Je hebt tot 15 minuten voor de start van iedere wedstrijd om je voorspelling in te geven of te wijzigen . We gebruiken de servertijd als richtlijn dus hier zal nooit discussie over ontstaan. Wees dus op tijd als je je voorspellingen wilt invullen.</p>
+
+                <p>Zoals je zult ziet zijn de wedstrijden in de volgende fase nog niet beschikbaar bij het begin van het toernooi . Deze zullen worden ingevuld zodra de verschillende teams door zijn naar de volgende ronde. Ook voor deze wedstrijden kun je tot 15 minuten voor aanvang je voorspelling doen of aanpassen. En denk je echt koning voetbal te zijn dan kun je natuurlijk ook in een keer al je voorspellingen doen.</p>
+
+                <strong>Score</strong>
+                <p>Tijdens de groep fase wordt de score aan het einde van de reguliere speeltijd gebruikt voor het berekenen van je behaalde score . Voor wedstrijden na deze fase gebruiken we de eindstand na het verstrijken van de reguliere tijd en extra tijd . Met doelpunten in een penalty shoot-out wordt geen rekening gehouden.</p>
+
+                <p>Je krijgt punten voor het voorspellen van de juiste winnaar van de wedstrijd of het voorspellen van een gelijkspel . We noemen dit de toto score . Heb je de exacte hoeveelheid doelpunten voorspeld dan krijg je extra punten . We noemen dit de volledige score . Heb je het aantal doelpunten goed maar de maar de uitslag van een wedstrijd niet dan ontvang je een goalbonus , zelfs als je het resultaat van een wedstrijd dus niet goed hebt ( bv. wedstrijd eindigde in 1-1 en je voorspelde 0-1 dan ontvang je nog steeds 1 punt ) .</p>
+
+                <strong>Puntenverdeling</strong>
+                Toto score <strong>3</strong>
+                volledige score <strong>5</strong>
+                Doel bonus <strong>1</strong>
+
+                <p>Wil je de ranglijsent bekijken , ga dan naar de ranking pagina en kies de juiste competitie.</p>
+
+                <strong>Aan het einde van het WK dezelfde score in een Pool ?</strong>
+                Wanneer meerdere spelers exact hetzelfde aantal punten hebben , dan zullen de volgende criteria worden gehanteerd waarbij de belangrijkste bovenaan staat</p>
+
+                <ol>
+                    <li>Totaal score van de volledige scores ;</li>
+                    <li>Hoeveelheid toto scores ;</li>
+                    <li>Totaal score  bonus vragen</li>
+                </ol>
+			</div>
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+       <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li class="active"><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">Menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page fifteen #spelregels -->
+
+<!-- Start of page sixteen: #social_share -->
+<div data-role="page" id="social-share" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#invite-friends">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="next-but-blk">
+			<a href="#dashboard">volgende</a>
+		</div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="home-page-pic">
+			<div class="make_prediction">
+				<div class="orange_blk clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Deel je pool</h1>
+					<h2>met al je vrienden</h2>
+				</div>
+			</div>
+			<div class="plain_text_content">
+				<div class="more_text"><h1>Maak kans op te gekke prijzen</h1>Deel je pool met vrienden voor de spannendste WK-wedstrijd van 2014!</div>
+				<div class="message message_share">
+					<p>Ik heb zojuist de wedstrijduitslagen en de winnaar van het WK 2014 voorspeld met de gratis app van Voorspel Oranje. Win ook toffe prijzen en doe mee! <a href="www.voorspeloranje.nl">www.voorspeloranje.nl</a></p>
+					<div class="share_icon"><A href="#"><img src="images/share_icon.png"></a></div>
+				</div>
+				<div class="social_lable">Deel via:</div>
+				<div class="social_block">
+					<ul>
+						<li><a href="#"><img src="images/social_icon_1.jpg"></a></li>
+						<li><a href="#"><img src="images/social_icon_2.jpg"></a></li>
+						<li><a href="#"><img src="images/social_icon_3.jpg"></a></li>
+						<li><a href="#"><img src="images/social_icon_4.jpg"></a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div><!-- /panel -->
+
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page sixteen #social_share -->
+
+<!-- Start of page: #seventeen -->
+<div data-role="page" id="stadions" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>De stadions</h1>
+					<h2>tijdens het wk 2014</h2>
+				</div>
+			</div>
+			
+			<div class="plain_text_content">
+				<p><strong>Hier worden alle wedstrijden gespeeld</strong></p>
+                <p>Een overzicht van alle stadions tijdens het WK 2014</p>
+                <p><strong>Arena Amazonia, Manaus</strong></p>
+				<p><img src="images/arena-amazonia.jpg"></p>
+                <p><strong>Arena Da Baixada, Curitiba</strong></p>
+				<p><img src="images/arena-da-baixada.jpg"></p>
+                <p><strong>Arena De Sao Paulo, Sao Paulo</strong></p>
+				<p><img src="images/arena-de-sao-paulo.jpg"></p>
+                <p><strong>Arena Fonte Nova, Salvador</strong></p>
+				<p><img src="images/arena-fonte-nova.jpg"></p>
+                <p><strong>Arena Pantanal, Cuiaba</strong></p>
+				<p><img src="images/arena-pantanal.jpg"></p>
+                <p><strong>Arena Pernambuco, Recife</strong></p>
+				<p><img src="images/arena-pernambuco.jpg"></p>
+                <p><strong>Estadio Beira-Rio, Porto Alegre</strong></p>
+				<p><img src="images/estadio-beira-rio.jpg"></p>
+                <p><strong>Estadio Castelao, Fortaleza</strong></p>
+				<p><img src="images/estadio-castelao.jpg"></p>
+                <p><strong>Estadio Das Dunas, Natal</strong></p>
+				<p><img src="images/estadio-das-dunas.jpg"></p>
+                <p><strong>Estadio Do Maracana, Rio de Janeiro</strong></p>
+				<p><img src="images/estadio-do-maracana.jpg"></p>
+                <p><strong>Estadio Mineirao, Belo Horizonte</strong></p>
+				<p><img src="images/estadio-mineirao.jpg"></p>
+                <p><strong>Estadio Nacional, Brasilia</strong></p>
+				<p><img src="images/estadio-nacional.jpg"></p>
+
+			</div>
+		</div>
+	
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+          <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li class="active"><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page seventeen #stadions -->
+
+<!-- Start of page eighteen: #wedstrijf_schema -->
+<div data-role="page" id="wedstrijd-schema" >
+
+	<div data-role="header" class="header">
+		<div class="back-but-blk">
+			<a href="#dashboard">terug</a>
+		</div>
+		<div class="logo"><img src="images/logo.png"></div>
+		<div class="right">
+		            <a href="#right-panel">
+		
+                <div class="menu_but"></div>
+            </a>
+        </div>
+		<div class="topshadow"></div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Alle wedstrijden</h1>
+					<h2>in een overzicht</h2>
+				</div>
+			</div>
+			
+			<div class="plain_text_content">
+				<p><strong>Wedstrijdschema</strong></p>
+				<p><strong>Poulefase</strong></p>
+<p><strong>Jun 12, 2014</strong></p>
+22:00 	Brazilië - Kroatië
+<p><strong>Jun 13, 2014</strong></p>
+18:00 	Mexico - Kameroen<br>
+21:00 	Spanje - Nederland<br>
+<p><strong>Jun 14, 2014</strong></p>
+00:00 	Chili - Australië<br>
+18:00 	Colombia - 	Griekenland<br>
+21:00 	Uruguay - Costa Rica<br>
+<p><strong>Jun 15, 2014</strong></p>
+00:00 	Engeland - Italië<br>
+03:00 	Ivoorkust - Japan<br>
+18:00 	Zwitserland - Ecuador<br>
+21:00 	Frankrijk - Honduras<br>
+<p><strong>Jun 16, 2014</strong></p>
+00:00 	Argentinië	- Bosnië en Herzegovina<br>
+18:00 	Duitsland - Portugal<br>
+21:00 	Iran - Nigeria<br>
+<p><strong>Jun 17, 2014</strong></p>
+00:00 	Ghana - Verenigde Staten<br>
+18:00 	België - Algerije<br>
+21:00 	Brazilië - Mexico<br>
+<p><strong>Jun 18, 2014</strong></p>
+00:00 	Rusland - Zuid-Korea<br>
+18:00 	Australië - Nederland<br>
+21:00 	Spanje - Chili<br>
+<p><strong>Jun 19, 2014</strong></p>
+00:00 	Kameroen - Kroatië<br>
+18:00 	Colombia - Ivoorkust<br>
+21:00 	Uruguay - Engeland<br>
+<p><strong>Jun 20, 2014</strong></p>
+00:00 	Japan - Griekenland<br>
+18:00 	Italië - Costa Rica<br>
+21:00 	Zwitserland - Frankrijk<br>
+<p><strong>Jun 21, 2014</strong></p>
+00:00 	Honduras - Ecuador<br>
+18:00 	Argentinië - Iran<br>
+21:00 	Duitsland - Ghana<br>
+<p><strong>Jun 22, 2014</strong></p>
+00:00 	Nigeria - Bosnië en Herzegovina<br>
+18:00 	België - Rusland<br>
+21:00 	Zuid-Korea - Algerije<br>
+<p><strong>Jun 23, 2014</strong></p>
+00:00 	Verenigde Staten - Portugal<br>
+18:00 	Australië - Spanje<br>
+18:00 	Nederland - Chili<br>
+22:00 	Kameroen - Brazilië<br>
+22:00 	Kroatië - Mexico<br>
+<p><strong>Jun 24, 2014</strong></p>
+18:00 	Italië - Uruguay <br>
+18:00 	Costa Rica	- Engeland<br>
+22:00 	Japan - Colombia<br>
+22:00 	Griekenland - Ivoorkust<br>
+<p><strong>Jun 25, 2014</strong></p>
+18:00 	Nigeria - Argentinië <br>
+18:00 	Bosnië en Herzegovina - Iran<br>
+22:00 	Honduras - 	Zwitserland <br>
+22:00 	Ecuador - 	Frankrijk <br>
+<p><strong>Jun 26, 2014</strong></p>
+18:00 	Verenigde Staten - Duitsland<br>
+18:00 	Portugal - Ghana<br>
+22:00 	Zuid-Korea - België<br>
+22:00 	Algerije - Rusland<br>
+<p><strong>Achtste finale</strong></p>
+<p><strong>Jun 28, 2014</strong></p>
+18:00 	Winnaar Poule A 		- 		2e Plaats Poule B<br>
+22:00 	Winnaar Poule C 		- 		2e Plaats Poule D<br>
+<p><strong>Jun 29, 2014</strong>
+18:00 	Winnaar Poule B 		- 		2e Plaats Poule A<br>
+22:00 	Winnaar Poule D 		- 		2e Plaats Poule C<br>
+<p><strong>Jun 30, 2014</strong>
+18:00 	Winnaar Poule E 		- 		2e Plaats Poule F<br>
+22:00 	Winnaar Poule G 		- 		2e Plaats Poule H<br>
+<p><strong>Jul 01, 2014</strong>
+18:00 	Winnaar Poule F 		- 		2e Plaats Poule E<br>
+22:00 	Winnaar Poule H 		- 		2e Plaats Poule G<br>
+<p><strong>Kwartfinale</strong></p>
+<p><strong>Jul 04, 2014</strong></p>
+18:00 	Winnaar wedstrijd 53 		- 		Winnaar wedstrijd 54<br>
+22:00 	Winnaar wedstrijd 49 		- 		Winnaar wedstrijd 50<br>
+<p><strong>Jul 05, 2014</strong></p>
+18:00 	Winnaar wedstrijd 55 		- 		Winnaar wedstrijd 56<br>
+22:00 	Winnaar wedstrijd 51 		- 		Winnaar wedstrijd 52<br>
+<p><strong>Halve finale</strong></p>
+<p><strong>Jul 08, 2014</strong></p>
+22:00 	Winnaar wedstrijd 57 		- 		Winnaar wedstrijd 58
+<p><strong>Jul 09, 2014</strong></p>
+22:00 	Winnaar wedstrijd 59 		- 		Winnaar wedstrijd 60
+<p><strong>Wedstrijd voor derde plek</strong></p>
+<p><strong>Jul 12, 2014</strong></p>
+22:00 	Verliezer wedstrijd 61 		- 		Verliezer wedstrijd 62
+<p><strong>Finale</strong></p>
+<p><strong>Jul 13, 2014</strong></p>
+21:00 	Winnaar wedstrijd 61 		- 		Winnaar wedstrijd 62
+			</div>
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li class="active"><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo"><img src="images/footer-total.png"></div>
+		<!--<div class="footer_line footer_line_pool clearfix"></div>-->
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<!-- Start of page 19 #your_pool -->
+<div data-role="page" id="your-pool-1" >
+    <div data-role="header" class="header">
+        <div class="back-but-blk">
+            <a href="#dashboard">terug</a>
+        </div>
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="right">
+            <a href="#right-panel">
+                <div class="menu_but"></div>
+            </a>
+        </div>
+        <div class="topshadow"></div>
+    </div><!-- /header -->
+	<div role="main" class="ui-content" >
+		<div class="body_container">
+			<div class="orange_blk_soccer clearfix">
+				<div class="orange_logo"><img src="images/orange_logo.png"></div>
+				<div class="orange_blk_titles">
+					<h1>Deelnemen</h1>
+					<h2>aan een pool</h2>
+				</div>
+			</div>
+			
+			<div class="results"></div>
+		</div>
+	</div><!-- /content -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+        <div class="menu-header">
+            <img src="images/orange_logo.png">
+            <span>menu</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#wedstrijd-schema">Wedstrijd schema</a></li>
+            <li><a href="#stadions">Stadions</a></li>
+            <li><a href="#groepen">Groepen</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#spelregels">Spelregels</a></li>
+            <li><a href="#over-ons">De Huizenbemiddelaar</a></li>
+            <li><a href="#" data-rel="close">menu sluiten</a></li>
+        </ul>
+    </div><!-- /panel -->
+	<div data-role="footer" data-theme="a">
+		<div class="bot-orange-logo create-pool-logo"><img src="images/single-pool-orange-logo.png"></div>
+		<div class="footer_line footer_line_pool clearfix"></div>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+</body>
+</html>
